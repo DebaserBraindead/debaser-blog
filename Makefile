@@ -1,5 +1,3 @@
-VENV=/home/debaser/.virtualenvs/pelican/bin/activate
-
 PELICAN=pelican
 PELICANOPTS=None
 
@@ -30,10 +28,7 @@ help:
 	@echo '                                                                      '
 
 
-venv:
-	. $(VENV)
-
-html: venv clean $(OUTPUTDIR)/index.html
+html: clean $(OUTPUTDIR)/index.html
 	@echo 'Done'
 
 $(OUTPUTDIR)/%.html:
@@ -60,7 +55,7 @@ github: $(OUTPUTDIR)/index.html
 	git push origin gh-pages
 
 preview: html
-	python -m webbrowser ./output/index.html
+	google-chrome ./output/index.html
 
 .PHONY: html help clean ftp_upload ssh_upload dropbox_upload github
     
