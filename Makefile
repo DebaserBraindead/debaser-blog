@@ -1,3 +1,4 @@
+VENV=/home/debaser/.virtualenvs/pelican/bin/activate
 
 PELICAN=pelican
 PELICANOPTS=None
@@ -29,7 +30,10 @@ help:
 	@echo '                                                                      '
 
 
-html: clean $(OUTPUTDIR)/index.html
+venv:
+	. $(VENV)
+
+html: venv clean $(OUTPUTDIR)/index.html
 	@echo 'Done'
 
 $(OUTPUTDIR)/%.html:
@@ -45,12 +49,18 @@ dropbox_upload: $(OUTPUTDIR)/index.html
 ssh_upload: $(OUTPUTDIR)/index.html
 	scp -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
+rsync_upload: $(OUTPUTDIR)/index.html
+	rsync -r $(OUTPUTDIR) $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+
 ftp_upload: $(OUTPUTDIR)/index.html
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUT_DIR)/* $(FTP_TARGET_DIR) ; quit"
 
 github: $(OUTPUTDIR)/index.html
 	ghp-import $(OUTPUTDIR)
 	git push origin gh-pages
+
+preview: html
+	python -m webbrowser ./output/index.html
 
 .PHONY: html help clean ftp_upload ssh_upload dropbox_upload github
     
