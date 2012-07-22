@@ -10,9 +10,9 @@ Générer une clef asymétrique
 
 J'ai constaté que j'avais de la peine à retrouver la bonne commande
 pour génerer rapidement une clef asymétrique et un certificat associé, malgré
-la documents de openssl_.
+la documentation de openssl_.
 
-Voilà donc la solution que je détail juste après :
+Voilà donc la solution :
 
 .. code-block:: sh
 
@@ -24,6 +24,6 @@ Voilà donc la solution que je détail juste après :
 
 Je vous épargne les détails liés à la pure configuration du server http, c'est assez trivial que ce soit avec `nginx <http://wiki.nginx.org/HttpSslModule>`_, `apache <http://onlamp.com/onlamp/2008/03/04/step-by-step-configuring-ssl-under-apache.html>`_, `node.js <http://nodejs.org/docs/v0.3.7/api/https.html#https.createServer>`_ et plus encore.
 
-
+PS: Cette article marque donc aussi l'ouverture de l'accès à ce blog en https, mettez à jour vos bookmarks!
 
 .. _openssl: http://www.openssl.org/
