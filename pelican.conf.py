@@ -10,6 +10,8 @@ TIMEZONE = 'Europe/Paris'
 
 DEFAULT_LANG='fr'
 
+STATIC_PATHS=['images',]
+
 # Blogroll
 LINKS =  (
     ('Pelican', 'http://docs.notmyidea.org/alexis/pelican/'),
