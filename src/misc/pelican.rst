@@ -3,7 +3,6 @@ Pelican
 
 :date: 2012-07-22 16:01
 :tags: python, blog, pelican
-:category: misc
 :author: Debaser
 :slug: pelican
 :lang: fr

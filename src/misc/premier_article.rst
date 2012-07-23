@@ -3,7 +3,6 @@ My super title
 
 :date: 2012-07-16 22:26
 :tags: first, post
-:category: misc
 :author: Debaser
 :slug: my-super-title
 :lang: fr
