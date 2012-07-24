@@ -3,7 +3,7 @@
 
 AUTHOR = u"Debaser"
 SITENAME = u"Debaser's Blog"
-SITEURL = '/'
+SITEURL = ''
 TWITTER_USERNAME = '_Debaser_'
 DISQUS_SITENAME = 'debaser'
 
