@@ -5,6 +5,7 @@ AUTHOR = u"Debaser"
 SITENAME = u"Debaser's Blog"
 SITEURL = '/'
 TWITTER_USERNAME = '_Debaser_'
+DISQUS_SITENAME = 'debaser'
 
 TIMEZONE = 'Europe/Paris'
 
